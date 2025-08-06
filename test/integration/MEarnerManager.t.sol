@@ -11,7 +11,7 @@ import { BaseIntegrationTest } from "../utils/BaseIntegrationTest.sol";
 contract MEarnerManagerIntegrationTests is BaseIntegrationTest {
     uint256 public mainnetFork;
 
-    function setUp() public override {
+    function setUp() public override virtual {
         mainnetFork = vm.createSelectFork(vm.envString("MAINNET_RPC_URL"), 22_482_175);
 
         super.setUp();
